@@ -1,0 +1,20 @@
+code {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+}
+
+body {
+    font: 14px "Century Gothic", Futura, sans-serif;
+    margin: 20px;
+    background: #eae5e578;
+}
+
+ol, ul {
+    padding-left: 30px;
+}
+
+.status {
+    margin-bottom: 10px;
+    text-align: center;
+}
