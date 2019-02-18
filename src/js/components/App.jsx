@@ -1,6 +1,7 @@
 import React from "react";
 import List from "./List.jsx";
 import Form from "./Form.jsx";
+import 'bootstrap/dist/css/bootstrap.css';
 
 const App = () => (
 
