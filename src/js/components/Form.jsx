@@ -14,22 +14,34 @@ class ConnectedForm extends Component {
 
     constructor() {
         super();
+
         this.state = {
             title: ""
         };
+        
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    handleChange(event) {
-        this.setState({ [event.target.id]: event.target.value });
+    handleChange(e) {
+        this.setState({ [e.target.id]: e.target.value });
     }
 
-    handleSubmit(event) {
+    handleSubmit(e) {
         
-        event.preventDefault();
+        e.preventDefault();
         const { title } = this.state;
         const id = uuidv1();
+
+        // let's add a check for forbidden words
+        const forbiddenWords = ['spam', 'money'];
+        const foundWord = forbiddenWords.filter(word => title.includes(word));
+        
+        if (foundWord) {
+            // return this.props.titleForbidden();
+            // return this.props.addArticle();
+        }
+        
         this.props.addArticle({ title, id });
         this.setState({ title: "" });
     }
@@ -48,9 +60,11 @@ class ConnectedForm extends Component {
                         onChange={this.handleChange}
                     />
                 </div>
+                
                 <button type="submit" className="btn btn-success btn-lg">
                     SAVE
-        </button>
+                </button>
+
             </form>
         );
     }
