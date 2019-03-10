@@ -4,7 +4,7 @@ import Form from "./Form.jsx";
 import 'bootstrap/dist/css/bootstrap.css';
 
 const App = () => (
-
+    
     <div className="row mt-5">
         <div className="col-md-4 offset-md-1">
             <h2>Articles</h2>
